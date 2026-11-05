@@ -1,0 +1,19 @@
+# build output and installers
+dist/
+*.exe
+*.zip
+# external programs (download them from their official sites)
+trimAL/
+IQTREE/
+iqtree-*/
+# local files
+*.log
+instance.txt
+last_error.txt
+prof.out
+.Rproj.user/
+.Rhistory
+.RData
+*.Rproj
+rsconnect/
+renv/
