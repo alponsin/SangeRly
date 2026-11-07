@@ -99,7 +99,7 @@ If you use SangeRly in a publication, please also cite the tools you used throug
 
 ## How to cite
 
-> [alponsin and Putra,A.E]. SangeRly: an R/Shiny application for Sanger sequence assembly, identification and phylogeny
-> [version 1.0], [2026]. https://github.com/alponsin/sangerly
+> Alponsin and Putra, A.E. SangeRly: an R/Shiny application for Sanger sequence assembly, identification and phylogeny
+> version 1.0, 2026. https://github.com/alponsin/sangerly
 
 (Replace with the final reference when a paper or a Zenodo DOI is available.)
