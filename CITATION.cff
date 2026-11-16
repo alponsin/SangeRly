@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use Sangerly, please cite it as below."
+title: "Sangerly: R Shiny application for Sanger sequence assembly, BLAST identification, alignment and phylogeny"
+version: 1.0.0
+date-released: 2026-11-05
+type: software
+authors:
+  - name: "Alponsin"
+  - family-names: "Putra"
+    given-names: "Andani Eka"
+repository-code: "https://github.com/alponsin/sangerly"
+doi: 10.5281/zenodo.24126657
+license: GPL-3.0-or-later

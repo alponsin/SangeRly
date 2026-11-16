@@ -1,0 +1,6 @@
+dist/
+dist_qt/
+build_qt/
+Output/
+__pycache__/
+*.pyc
