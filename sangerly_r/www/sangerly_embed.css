@@ -1,0 +1,160 @@
+/* SangeRly - look used inside the Qt window (html.sg-embed is set by sangerly_embed.js when the page is opened with ?embed=1).
+   Only appearance: no tool is changed. The same colours as the Qt chrome (see sangerly/theme.py). */
+html.sg-embed{
+  --sg-navy:#0f1f3d; --sg-accent:#2563eb; --sg-accent-d:#1d4ed8; --sg-accent-soft:#e8f0ff;
+  --sg-bg:#f4f6fa; --sg-panel:#fff; --sg-subtle:#f8fafc; --sg-border:#e2e8f0; --sg-border2:#cbd5e1;
+  --sg-text:#0f172a; --sg-muted:#64748b; --sg-ok:#16a34a; --sg-warn:#d97706; --sg-bad:#dc2626;
+  --sg-r:12px; --sg-shadow:0 1px 2px rgba(15,23,42,.05),0 6px 18px rgba(15,23,42,.05);
+}
+html.sg-embed body{background:var(--sg-bg)!important;color:var(--sg-text);
+  font-family:"Segoe UI Variable Text","Segoe UI",Inter,system-ui,"Noto Sans",sans-serif;font-size:14px;letter-spacing:.005em}
+/* the Qt ribbon replaces the web menu bar */
+html.sg-embed .navbar{display:none!important}
+html.sg-embed body>.container-fluid{padding:16px 22px 28px!important}
+html.sg-embed .tab-content>.tab-pane{padding-top:2px}
+html.sg-embed h1,html.sg-embed h2,html.sg-embed h3,html.sg-embed h4,html.sg-embed h5{color:var(--sg-navy);font-weight:700;letter-spacing:-.01em}
+
+/* panels and cards */
+html.sg-embed .well,html.sg-embed .card,html.sg-embed .sidebar-sec,html.sg-embed .ibox,html.sg-embed .sv-root,
+html.sg-embed .bslib-sidebar-layout>.sidebar{background:var(--sg-panel);border:1px solid var(--sg-border)!important;
+  border-radius:var(--sg-r)!important;box-shadow:var(--sg-shadow)!important}
+html.sg-embed .col-sm-3>form.well,html.sg-embed .col-sm-4>form.well{background:transparent;border:0!important;box-shadow:none!important;padding:0}
+html.sg-embed .card-header{background:var(--sg-subtle)!important;border-bottom:1px solid var(--sg-border)!important;
+  color:var(--sg-navy)!important;font-weight:700;font-size:13.5px;padding:10px 16px;border-radius:var(--sg-r) var(--sg-r) 0 0!important;
+  position:relative;padding-left:20px}
+html.sg-embed .card-header::before{content:"";position:absolute;left:0;top:9px;bottom:9px;width:4px;border-radius:0 4px 4px 0;background:var(--sg-accent)}
+html.sg-embed .card-body{padding:14px 16px}
+html.sg-embed .sidebar-sec{padding:12px 16px;margin-bottom:14px}
+html.sg-embed .sidebar-sec summary{font-weight:700;color:var(--sg-navy);list-style:none;padding:2px 0 8px;display:flex;align-items:center;gap:8px}
+html.sg-embed .sidebar-sec summary::-webkit-details-marker{display:none}
+html.sg-embed .sidebar-sec summary::before{content:"";width:8px;height:8px;border-right:2px solid var(--sg-muted);border-bottom:2px solid var(--sg-muted);
+  transform:rotate(-45deg);transition:transform .15s}
+html.sg-embed .sidebar-sec details[open]>summary::before{transform:rotate(45deg)}
+
+/* summary tiles */
+html.sg-embed .ibox{overflow:hidden;margin-bottom:14px}
+html.sg-embed .ibox-ico{width:52px;font-size:20px}
+html.sg-embed .ibox-lab{font-size:11px;font-weight:600;color:var(--sg-muted);letter-spacing:.06em}
+html.sg-embed .ibox-val{font-size:22px;font-weight:700;color:var(--sg-navy)}
+
+/* tabs: underline style like the Qt document tabs, second row allowed */
+html.sg-embed .nav-tabs{border-bottom:1px solid var(--sg-border);gap:2px;margin-bottom:10px}
+html.sg-embed .nav-tabs .nav-link{border:0!important;border-bottom:3px solid transparent!important;border-radius:8px 8px 0 0;
+  color:var(--sg-muted)!important;font-weight:600;padding:9px 14px;background:transparent}
+html.sg-embed .nav-tabs .nav-link:hover{color:var(--sg-accent)!important;background:var(--sg-accent-soft)}
+html.sg-embed .nav-tabs .nav-link.active{color:var(--sg-accent)!important;border-bottom-color:var(--sg-accent)!important;background:transparent!important}
+html.sg-embed .nav-pills .nav-link.active{background:var(--sg-accent)}
+
+/* inputs and buttons */
+html.sg-embed .form-control,html.sg-embed .form-select,html.sg-embed .selectize-input,html.sg-embed textarea{
+  border:1px solid var(--sg-border2)!important;border-radius:9px!important;box-shadow:none!important;background:#fff;min-height:36px}
+html.sg-embed .form-control:focus,html.sg-embed .form-select:focus,html.sg-embed .selectize-input.focus{
+  border-color:var(--sg-accent)!important;box-shadow:0 0 0 3px rgba(37,99,235,.16)!important}
+html.sg-embed label,html.sg-embed .control-label{font-weight:600;color:#334155;font-size:13px}
+html.sg-embed .help-block,html.sg-embed .form-text,html.sg-embed .shiny-help-text,html.sg-embed p.help-block{color:var(--sg-muted);font-size:12.5px}
+html.sg-embed .btn{border-radius:9px;font-weight:600;font-size:13px;padding:7px 14px;border-width:1px;transition:background .12s,box-shadow .12s,transform .05s}
+html.sg-embed .btn:active{transform:translateY(1px)}
+html.sg-embed .btn-primary,html.sg-embed .btn-success{background:var(--sg-accent);border-color:var(--sg-accent);color:#fff}
+html.sg-embed .btn-primary:hover,html.sg-embed .btn-success:hover{background:var(--sg-accent-d);border-color:var(--sg-accent-d);box-shadow:0 4px 12px rgba(37,99,235,.28)}
+html.sg-embed .btn-danger{background:linear-gradient(135deg,#2563eb,#0ea5a4);border:0;color:#fff;padding:11px 16px;font-size:14px;letter-spacing:.03em}
+html.sg-embed .btn-danger:hover{filter:brightness(1.07);box-shadow:0 6px 16px rgba(14,165,164,.32);color:#fff}
+html.sg-embed .btn-default,html.sg-embed .btn-secondary,html.sg-embed .btn-outline-secondary{background:#fff;border-color:var(--sg-border2);color:#334155}
+html.sg-embed .btn-default:hover,html.sg-embed .btn-secondary:hover{background:#f1f5f9;border-color:#94a3b8;color:var(--sg-text)}
+html.sg-embed .form-check-input:checked,html.sg-embed .radio input:checked{background-color:var(--sg-accent);border-color:var(--sg-accent)}
+html.sg-embed .irs--shiny .irs-bar{background:var(--sg-accent);border-color:var(--sg-accent)}
+html.sg-embed .irs--shiny .irs-handle{border-color:var(--sg-accent)}
+html.sg-embed .irs--shiny .irs-single,html.sg-embed .irs--shiny .irs-from,html.sg-embed .irs--shiny .irs-to{background:var(--sg-accent)}
+
+/* tables */
+html.sg-embed table.dataTable{border-collapse:separate!important;border-spacing:0;border:1px solid var(--sg-border);border-radius:10px;overflow:hidden}
+html.sg-embed table.dataTable thead th{background:var(--sg-subtle)!important;color:var(--sg-muted);font-size:11.5px;letter-spacing:.05em;
+  text-transform:uppercase;font-weight:700;border-bottom:1px solid var(--sg-border)!important;padding:9px 10px}
+html.sg-embed table.dataTable tbody td{padding:7px 10px;border-top:1px solid #eef2f7}
+html.sg-embed table.dataTable tbody tr:hover>td{background:#f1f6ff!important}
+html.sg-embed table.dataTable tbody tr.selected>td{background:var(--sg-accent-soft)!important;box-shadow:none!important;color:var(--sg-text)}
+html.sg-embed .dataTables_wrapper .dataTables_filter input,html.sg-embed .dataTables_wrapper .dataTables_length select{border:1px solid var(--sg-border2);border-radius:8px;padding:3px 8px}
+html.sg-embed .page-link{border-radius:8px;margin:0 2px;color:var(--sg-accent)}
+html.sg-embed .page-item.active .page-link{background:var(--sg-accent);border-color:var(--sg-accent)}
+
+/* alerts, notifications, plots, code */
+html.sg-embed .alert{border-radius:10px;border:1px solid var(--sg-border);box-shadow:none}
+html.sg-embed .alert-success{background:#ecfdf3;border-color:#bbf7d0;color:#14532d}
+html.sg-embed .alert-info{background:var(--sg-accent-soft);border-color:#c7d8fb;color:#1e3a8a}
+html.sg-embed .alert-danger{background:#fef2f2;border-color:#fecaca;color:#7f1d1d}
+html.sg-embed .alert-warn,html.sg-embed .alert-warning{background:#fffbeb;border-color:#fde68a;color:#78350f}
+html.sg-embed #shiny-notification-panel{bottom:16px;right:16px}
+html.sg-embed .shiny-notification{border-radius:12px;border:1px solid var(--sg-border);box-shadow:0 10px 30px rgba(15,23,42,.18);opacity:1;background:#fff}
+html.sg-embed .shiny-notification-message{border-left:4px solid var(--sg-accent)}
+html.sg-embed .shiny-notification-warning{border-left:4px solid var(--sg-warn)}
+html.sg-embed .shiny-notification-error{border-left:4px solid var(--sg-bad)}
+html.sg-embed .progress{border-radius:8px;height:10px}
+html.sg-embed .progress-bar{background:linear-gradient(90deg,#2563eb,#0ea5a4)}
+html.sg-embed .shiny-plot-output,html.sg-embed .shiny-image-output{background:#fff;border:1px solid var(--sg-border);border-radius:var(--sg-r);padding:6px}
+html.sg-embed pre,html.sg-embed pre.sx{border:1px solid var(--sg-border);border-radius:10px;background:var(--sg-subtle)}
+html.sg-embed .modal-content{border:0;border-radius:16px;box-shadow:0 24px 60px rgba(15,23,42,.30)}
+html.sg-embed .modal-header{border-bottom:1px solid var(--sg-border)}
+html.sg-embed .modal-footer{border-top:1px solid var(--sg-border)}
+
+/* alignment viewer toolbar */
+html.sg-embed .sv-toolbar{background:var(--sg-subtle);border-bottom:1px solid var(--sg-border);padding:8px 14px}
+html.sg-embed .sv-scroll:focus{box-shadow:inset 0 0 0 2px rgba(37,99,235,.35)}
+
+/* Home page cards (when the Home tab is opened in the window) */
+html.sg-embed .sg-card{border:1px solid var(--sg-border);box-shadow:var(--sg-shadow);border-radius:16px}
+html.sg-embed .sg-card:hover{border-color:var(--sg-accent);box-shadow:0 12px 28px rgba(37,99,235,.18)}
+html.sg-embed .sg-step{background:linear-gradient(135deg,#2563eb,#0ea5a4)}
+
+/* thin scrollbars */
+html.sg-embed ::-webkit-scrollbar{width:11px;height:11px}
+html.sg-embed ::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:8px;border:3px solid var(--sg-bg)}
+html.sg-embed ::-webkit-scrollbar-thumb:hover{background:#94a3b8}
+html.sg-embed ::-webkit-scrollbar-track{background:transparent}
+
+/* interactive tree viewer (Phylogeny > Interactive view); also used in the normal browser */
+.sg-itree{background:#fff;border:1px solid #e2e8f0;border-radius:12px;box-shadow:0 1px 2px rgba(15,23,42,.05),0 6px 18px rgba(15,23,42,.05);overflow:hidden;margin-bottom:12px}
+.sgt-bar{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;padding:10px 14px;background:#f8fafc;border-bottom:1px solid #e2e8f0;font-size:12.5px;color:#0f1f3d}
+.sgt-bar label{display:flex;align-items:center;gap:6px;margin:0;font-weight:600}
+.sgt-bar select,.sgt-bar input[type=search]{border:1px solid #cbd5e1;border-radius:8px;padding:3px 8px;font-size:12.5px;background:#fff}
+.sgt-bar input[type=range]{width:90px}
+.sgt-btns{margin-left:auto;display:flex;gap:6px}
+.sgt-btns button{border:1px solid #cbd5e1;background:#fff;border-radius:8px;padding:4px 11px;font-weight:600;font-size:12px;color:#334155}
+.sgt-btns button:hover{background:#eef2ff;border-color:#2563eb;color:#2563eb}
+.sgt-legend{display:flex;flex-wrap:wrap;gap:4px 14px;padding:6px 14px;font-size:12px;color:#64748b;border-bottom:1px solid #eef2f7;min-height:30px}
+.sgt-legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:middle}
+.sgt-stage{position:relative;height:560px;background:#fff}
+.sgt-svg-el{width:100%;height:100%;display:block;cursor:grab;user-select:none}
+.sgt-help{position:absolute;left:12px;bottom:8px;font-size:11.5px;color:#94a3b8;pointer-events:none}
+
+/* sliders are replaced by number boxes (sangerly_embed.js keeps the slider underneath, hidden) */
+html.sg-embed .shiny-input-container:has(input.sg-numified) .irs{display:none!important}
+html.sg-embed .sg-numbox{display:inline-flex;align-items:center;gap:6px}
+html.sg-embed .sg-numbox input.sg-num{width:112px;text-align:right;padding-right:8px;font-variant-numeric:tabular-nums}
+html.sg-embed .sg-numdash{color:var(--sg-muted)}
+html.sg-embed .sg-numunit{color:var(--sg-muted);font-size:12.5px}
+
+/* Assembly tab: input card (opens the Qt window) and "Advanced" sections */
+html.sg-embed .sg-input-orig{display:none!important}
+html.sg-embed .sg-input-card{padding:14px 16px}
+html.sg-embed .sg-ic-title{font-weight:700;color:var(--sg-navy);margin-bottom:6px}
+html.sg-embed .sg-ic-text{color:var(--sg-muted);font-size:12.5px;margin-bottom:12px;line-height:1.45}
+html.sg-embed .sg-ic-btn{margin:0 6px 6px 0}
+html.sg-embed .sg-adv summary{justify-content:flex-start}
+/* Assembly tab: what the "New assembly" window already does is not repeated on the page (the inputs stay in the page, hidden,
+   because the R code reads them) */
+html.sg-embed .sg-hide{display:none!important}
+html.sg-embed #asm-go{display:none!important}
+html.sg-embed .sg-input-card .sg-ic-btn ~ .sg-ic-btn{display:none!important}
+html.sg-embed .sg-adv summary::after{content:"Advanced";margin-left:auto;font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--sg-muted);background:var(--sg-subtle);border:1px solid var(--sg-border);border-radius:20px;padding:1px 9px}
+
+/* ---- v10: document tabs live in the Qt window, dialogs replace the stacked panels ---------------------------------------------- */
+/* the strip of tabs inside a tool is hidden: the Qt tab bar (and Tools menu) chooses the section. Window > "Show the tabs inside the tools" brings it back */
+html.sg-embed:not(.sg-showtabs) .sg-maintabs{display:none!important}
+html.sg-embed:not(.sg-showtabs) .sg-maintabs+.tab-content>.tab-pane{padding-top:0}
+/* MSA: the left column (method, sequences, trimming) is replaced by the dialogs; the results use the whole width */
+html.sg-embed:not(.sg-classic) .sg-full{flex:0 0 100%!important;max-width:100%!important;width:100%!important}
+/* no step numbers on the Home cards */
+html.sg-embed .sg-step{display:none!important}
+
+/* panels replaced by the Qt dialogs; Window > Classic panels brings the Shiny input / run panels back */
+html.sg-embed:not(.sg-classic) .sg-hide2{display:none!important}
