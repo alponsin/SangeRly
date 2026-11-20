@@ -26,11 +26,7 @@ Everything works offline except BLAST, fetching a reference by NCBI accession, v
 
 Get `SangeRly_Setup.exe` from the [**Releases**](https://github.com/alponsin/sangerly/releases) page and run it. It installs for the current user (no administrator rights needed) and adds a Start-menu entry and an optional desktop shortcut. R is included, so you do not need to install anything else.
 
-> **Code signing.** Releases are signed with a certificate from the SignPath Foundation (see [`CODE_SIGNING.md`](CODE_SIGNING.md)). Earlier or unsigned builds may make Windows SmartScreen warn: click **More info**, then **Run anyway**. The SHA-256 checksum of each release is given on the Releases page.
->
-> **Privacy.** SangeRly has no telemetry. It contacts NCBI, BOLD, PR2, qPrimerDB and PrimerBank only when you press a search or BLAST button, and then sends only what that function needs. See [`PRIVACY.md`](PRIVACY.md).
-
-> **Unsigned installer (before signing is approved).** Windows SmartScreen may warn because the installer is not code-signed yet: click **More info**, then **Run anyway**. The SHA-256 checksum of each release is given on the Releases page.
+> **Unsigned installer.** Windows SmartScreen may warn because the installer is not code-signed yet: click **More info**, then **Run anyway**. The SHA-256 checksum of each release is given on the Releases page.
 
 **Platform.** The installer and the portable R are built for 64-bit Windows 10 and 11 only. macOS, Linux and 32-bit Windows are not supported: running from source may work on macOS and Linux but has not been tested.
 
