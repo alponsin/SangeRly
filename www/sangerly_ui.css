@@ -1,0 +1,49 @@
+/* SangeRly - small interface helpers: Save menu, folding cards, compact search row. Appearance only. */
+
+/* "Save v" menu (www/sangerly_ui.js builds it from .sg-dlgroup) */
+.sg-dlgroup{display:inline-flex;flex-wrap:wrap;gap:6px;margin:0 6px 4px 0}
+.sg-dlgroup.sg-save{display:inline-block;position:relative}
+.sg-save-btn{font-weight:600}
+.sg-save-menu{min-width:230px;font-size:13px;padding:5px;border-radius:10px;border:1px solid #d8e0ea;box-shadow:0 8px 24px rgba(15,23,42,.14);z-index:2000}
+.sg-save-menu .dropdown-item{border-radius:6px;padding:6px 10px;cursor:pointer;white-space:normal;display:flex;align-items:center;gap:8px}
+.sg-save-menu .dropdown-item i{width:16px;color:#64748b;flex:none}
+.sg-save-menu .dropdown-item-text{padding:4px 10px}
+.sg-save-menu .form-group{margin-bottom:4px}
+.sg-save-menu .form-group label{font-size:12px;margin-bottom:2px;color:#52606d}
+
+/* bar with a few small tools (Save / Open) */
+.sg-bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:#f6f8fa;border:1px solid #e6ebf1;border-radius:8px;padding:5px 10px;margin-bottom:8px}
+.sg-bar .sg-dlgroup{margin:0}
+.sg-open .form-group{margin:0}
+.sg-open .form-control{display:none}
+.sg-open .input-group{display:block}
+.sg-open .btn{padding:.25rem .6rem;font-size:.82rem}
+.sg-open .progress{margin:4px 0 0;height:6px}
+
+/* a card that folds */
+details.sg-fold>summary.card-header{cursor:pointer;list-style:none;display:flex;align-items:center;gap:8px;user-select:none}
+details.sg-fold>summary.card-header::-webkit-details-marker{display:none}
+details.sg-fold>summary.card-header::after{content:'\25BE';margin-left:auto;color:#64748b;transition:transform .15s ease}
+details.sg-fold:not([open])>summary.card-header::after{transform:rotate(-90deg)}
+details.sg-fold:not([open]){margin-bottom:.6rem!important}
+details.sg-fold:not([open])>summary.card-header{border-bottom:0!important;border-radius:var(--sg-r,8px)!important}
+
+/* a light folding block of options */
+details.sg-opts{border:1px solid #e1e7ee;border-radius:8px;padding:2px 10px;margin:6px 0 8px;background:#fbfcfe}
+details.sg-opts>summary{cursor:pointer;font-weight:600;font-size:13px;color:#1f3c5f;padding:5px 0;list-style:none;user-select:none}
+details.sg-opts>summary::-webkit-details-marker{display:none}
+details.sg-opts>summary::before{content:'\25B8';display:inline-block;margin-right:6px;transition:transform .15s ease}
+details.sg-opts[open]>summary::before{transform:rotate(90deg)}
+details.sg-opts[open]{padding-bottom:6px}
+
+/* small (i) icon with a long explanation */
+.sg-hint{color:#64748b;cursor:help;margin-left:6px;font-size:.92em}
+.sg-hint:hover,.sg-hint:focus{color:#2563eb}
+
+/* compact search row (like AliView) */
+.sg-find{display:flex;align-items:center;gap:8px;flex-wrap:wrap;border:1px solid #dde3ea;border-radius:8px;padding:4px 10px;margin-bottom:6px;background:#fff}
+.sg-find .form-group{margin:0}
+.sg-find .form-control,.sg-find .form-select,.sg-find select{height:30px;padding:2px 8px;font-size:13px}
+.sg-find .sg-grow{flex:1}
+.sg-find .btn{padding:.2rem .7rem;font-size:.84rem}
+.sg-find-res:empty{display:none}
